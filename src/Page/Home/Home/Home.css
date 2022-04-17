@@ -7,3 +7,15 @@
     font-weight: bold;
     color: rgb(96, 16, 133);
 }
+.see-more{
+    text-align: center;
+    margin: 30px;
+}
+.see-more button{
+    width: 250px;
+    height: 50px;
+    border-radius: 7px;
+}
+.see-btn:hover{
+    background-color: rgb(198, 169, 228);
+}
