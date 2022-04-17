@@ -3,7 +3,7 @@ import './Login.css';
 import loginImg from '../../../image/loginImg.jpg';
 import google from '../../../image/google.png';
 import fb from '../../../image/facebook.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
@@ -12,16 +12,19 @@ const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    const location = useLocation();
 
-    const [ 
+    let from = location.state?.from?.pathname || '/';
+
+    const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    if(user){
-        navigate('/');
+    if (user) {
+        navigate(from, {replace:true});
     }
 
 

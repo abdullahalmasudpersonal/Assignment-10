@@ -12,7 +12,9 @@ import Footer from './Page/Shared/Footer/Footer';
 import Header from './Page/Shared/Header/Header';
 import Notfound from './Page/Shared/Notfound/Notfound';
 import Services from './Page/Shared/Services/Services';
+import CheckOut from './Page/CheckOut/CheckOut';
 import ServicesDetail from './Page/Shared/ServicesDetail/ServicesDetail';
+import RequireAuth from './Page/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -29,7 +31,12 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/services/:servicesId' element={<ServicesDetail />}></Route>
-        <Route path='checkout' element={<CheckOut/>}></Route>
+        <Route path='checkout' element={
+          <RequireAuth>
+            <CheckOut />
+          </RequireAuth>
+
+        }></Route>
         <Route path='*' element={<Notfound />}></Route>
       </Routes>
       <Footer />
