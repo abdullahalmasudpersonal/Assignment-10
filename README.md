@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Fstoppers
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is live link [Fstoppers](https://abdullahalmasud-laptop-reviews.netlify.app).
+
+- HOME[]
+- SERVICES[]
+- GALLERIES[]
+- BLOGS
+- CONTACT
+- ABOUT
+- LOGIN
+- REGISTER
 
 ## Available Scripts
 
