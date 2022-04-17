@@ -1,0 +1,9 @@
+.serviec-h1{
+    margin: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+.serviec-h1 span{
+    font-weight: bold;
+    color: rgb(96, 16, 133);
+}
