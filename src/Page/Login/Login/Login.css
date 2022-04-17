@@ -1,0 +1,103 @@
+
+.body {
+    background-image: url('background.jpg');
+    min-height: 380px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 7% 0;
+
+}
+.login {
+    height: 650px;
+    width: 400px;
+    margin: auto;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+
+.login img {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.login-bg {
+    margin: 0;
+    background-image: url('login-bg.jpg');
+    height: 428px;
+    border-radius: 0 0 5px 5px;
+}
+
+.login-div {
+    margin: 0;
+    display: grid;
+    margin: 0px 50px 0px 50px;
+}
+
+.login-div h2 {
+    margin: 30px 0;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-btn button {
+    border-radius: 5px;
+    margin-left: 5px;
+    background: none;
+    border: none;
+}
+
+.login-btn button:hover {
+    background: rgb(239, 228, 253);
+}
+
+.login-div input:not([type=checkbox]) {
+    height: 40px;
+    border-radius: 5px;
+    margin: 8px 0;
+}
+
+.login-btn2 {
+    height: 40px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgb(255, 186, 218);
+}
+
+.login-btn2:hover {
+    background: rgb(248, 145, 205);
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot-pass {
+    color: rgb(69, 71, 73);
+    cursor: pointer;
+}
+
+.forgot-pass:hover {
+    color: red;
+}
+
+.new-user {
+    color: rgb(70, 32, 158);
+}
+
+.new-user span {
+    color: rgb(167, 0, 189);
+    cursor: pointer;
+}
+
+.new-user span:hover {
+    font-weight: 500;
+    color: rgb(148, 138, 0);
+}

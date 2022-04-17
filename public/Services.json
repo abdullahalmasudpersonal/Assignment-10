@@ -1,0 +1,44 @@
+[
+    {
+        "_id": "1230104",
+        "name": "WEDDING / ENGAGEMENT / HOLUD",
+        "image": "https://images.unsplash.com/photo-1562249004-1f7289c19c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price":"2000",
+        "description": "It is a beautifying and blessing ceremony in the Bengali wedding tradition. Gaye holud is a joyous event that includes food, laughter, music and dance. The ceremony used to be a small one but in recent times, it has become a larger part of the whole wedding ceremony."
+    },
+    {
+        "_id": "2424524",
+        "name": "FASHION / PERSONAL / OUTDOOR",
+        "image": "https://images.unsplash.com/photo-1595860320513-01df382ebdb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price":"2200",
+        "description": "Fashion is a form of self-expression and autonomy at a particular period and place and in a specific context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture. The term implies a look defined by the fashion industry as that which is trending."
+    },
+    {
+        "_id": "6852524",
+        "name": "BIRTHDAY / KIDS / NEW BORN & BABIES",
+        "image": "https://images.unsplash.com/photo-1607991097055-7ff2829b0d6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "price":"2299",
+        "description": "The first birthday of a baby marks a special time for family and friends to gather together and celebrate the new little person in the group. The first birthday is the first time they get to try a cake.you know that listing the pictures of your baby's birthday is just pure fun and joy."
+    },
+    {
+        "_id": "2452424",
+        "name": "COMMERCIAL / PRODUCT / E-COMMERCE",
+        "image": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price":"1999",
+        "description": "A product description is a form of marketing copy used to describe and explain the benefits of your product. In other words, it provides all the information and details of your product on your ecommerce site. These product details can be one sentence, a short paragraph or bulleted."
+    },
+    {
+        "_id": "452424",
+        "name": " ANNIVERSARY / CONVOCATION",
+        "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price":"2499",
+        "description": "The definition of a convocation is a formal gathering of people who have been asked to come together, or a formal ceremony at a college or university where awards are given. Traditionally, the anniversary ceremony and the evening reception are invitation-only events."
+    },
+    {
+        "_id": "120524",
+        "name": "CORPORATE EVENTS / PARTY / SEMINAR",
+        "image": "https://images.unsplash.com/photo-1561489396-888724a1543d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "price":"2300",
+        "description": "Seminars are usually shorter events, lasting anywhere from a couple of hours to a few workdays. They have single or multiple speakers and generally keep all participants together in the same space."
+    }
+]
