@@ -1,8 +1,8 @@
 # Fstoppers
 
-This project is live link [Fstoppers](https://abdullahalmasud-laptop-reviews.netlify.app).
+This project is live link [Fstoppers](https://).
 
-- HOME[]
+- [HOME](http://localhost:3000/home)
 - SERVICES[]
 - GALLERIES[]
 - BLOGS
