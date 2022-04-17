@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import './ServicesInfo.css';
 
 const ServicesInfo = (props) => {
-    const { name, image, description, price } = props.services;
+    const { _id, name, image, description, price } = props.services;
+    const navigate = useNavigate();
+
+    const navigateToServicesDetail = id => {
+        navigate(`/services/${_id}`);
+    }
     return (
         <div className=''>
             <div className='single-cart '>
@@ -13,7 +19,12 @@ const ServicesInfo = (props) => {
                     <p><strong>Description:</strong> {description}</p>
                 </div>
                 <div className=''>
-                    <button className='cart-btn'>Booking</button>
+                    <button
+                        onClick={() => navigateToServicesDetail(_id)}
+                        className='cart-btn'
+                    >
+                        Booking
+                    </button>
                 </div>
             </div>
         </div>

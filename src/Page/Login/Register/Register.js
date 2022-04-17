@@ -2,10 +2,39 @@ import React from 'react';
 import loginImg from '../../../image/loginImg.jpg';
 import google from '../../../image/google.png';
 import fb from '../../../image/facebook.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ]= useCreateUserWithEmailAndPassword(auth);
+    const navigate = useNavigate();
+
+    const navigateLogin = () =>{
+        navigate('/login');
+    }
+
+    if(user){
+        navigate('/');
+    }
+
+    const handleRegister = event =>{
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        createUserWithEmailAndPassword(email, password);
+    }
+
+
+
     return (
         <div className='body'>
             <div className='login'>
@@ -25,12 +54,12 @@ const Register = () => {
                                 </button>
                             </div>
                         </div>
-                        <input type='text' name='text' placeholder='Enter name' />
-                        <input type='email' name='email' placeholder='Enter email' required />
-                        <input type='password' name='password' placeholder='Enter password' required />
-                        <button className='login-btn2'>
-                            Login
-                        </button>
+                        <form onSubmit={handleRegister} className='login-div'>
+                            <input type='text' name='name' placeholder='Enter name' />
+                            <input type='email' name='email' placeholder='Enter email' required />
+                            <input type='password' name='password' placeholder='Enter password' required />
+                            <input className='login-btn2' type='submit' value='Register'/>
+                        </form>
                         <div className='remember-forgot'>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -41,7 +70,7 @@ const Register = () => {
                             <p className='forgot-pass'>Forgot Password</p>
                         </div>
                         <div className='new-user'>
-                            <p style={{ textAlign: 'center' }}>Alrady have an account?<span> <Link style={{ textDecoration: 'none' }} to='/login'>Login</Link></span></p>
+                            <p style={{ textAlign: 'center' }}>Alrady have an account?<span> <Link style={{ textDecoration: 'none' }} to='/login' onClick={navigateLogin}>Login</Link></span></p>
                         </div>
                     </div>
                 </div>
