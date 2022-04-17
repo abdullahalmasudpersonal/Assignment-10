@@ -1,0 +1,16 @@
+.notfound{
+    margin-top: 100px;
+}
+.notfound img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width:650px){
+    .notfound img{
+        width: 290px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

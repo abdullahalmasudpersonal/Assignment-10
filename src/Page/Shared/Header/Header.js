@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../../node_modules/bootstrap/dist/js/bootstrap.min';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../image/logo.png';
 
@@ -21,8 +21,8 @@ const Header = () => {
                             <Nav.Link as={Link} to='/home'>HOME</Nav.Link>
                             <Nav.Link as={Link} to='/services'>SERVICES</Nav.Link>
                             <Nav.Link as={Link} to='/galleries'>GALLERIES</Nav.Link>
-                            <Nav.Link as={Link} to='/contact'>CONTACT</Nav.Link>
                             <Nav.Link as={Link} to='/blogs'>BLOGS</Nav.Link>
+                            <Nav.Link as={Link} to='/contact'>CONTACT</Nav.Link>
                             <Nav.Link as={Link} to="/about">ABOUT</Nav.Link>
                         </Nav>
                         <Nav>

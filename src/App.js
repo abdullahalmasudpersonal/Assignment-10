@@ -7,6 +7,8 @@ import Blogs from './Page/Blogs/Blogs';
 import Contact from './Page/Contact/Contact';
 import Galleries from './Page/Galleries/Galleries';
 import Home from './Page/Home/Home/Home';
+import Login from './Page/Login/Login/Login';
+import Register from './Page/Login/Register/Register';
 import Footer from './Page/Shared/Footer/Footer';
 import Header from './Page/Shared/Header/Header';
 import Notfound from './Page/Shared/Notfound/Notfound';
@@ -24,8 +26,8 @@ function App() {
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/about' element={<About />}></Route>
-        <Route path='/login' element={<About />}></Route>
-        <Route path='/register' element={<About />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
         <Route path='*' element={<Notfound />}></Route>
       </Routes>
       <Footer />

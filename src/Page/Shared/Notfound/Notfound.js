@@ -1,9 +1,10 @@
 import React from 'react';
+import './Notfound.css';
 
 const Notfound = () => {
     return (
-        <div>
-            <h3>Notfound</h3>
+        <div className='notfound'>
+            <img src='https://www.designbolts.com/wp-content/uploads/2015/12/Cute-404-page-not-found-design.jpg' alt='Page Not Found'></img>
         </div>
     );
 };
