@@ -13,17 +13,19 @@ This project is live link [Fstoppers](https://).
 
 ## Used External Tools
  ### `Firebase` `React Router` `Use Hooks`
- ### `Bootstrap``React-Boostrap` `useRef`
- ###
- ###
- ###
- ###
- ###
+ ### `Bootstrap` `React-Boostrap` `useRef`
  ###
  ###
 
 
-In the project directory, you can run:
+
+
+
+
+
+
+
+
 
 ### `npm start`
 
