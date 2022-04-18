@@ -12,12 +12,8 @@ This project is live link [Fstoppers](https://).
 - REGISTER
 
 ## Used External Tools
- ### `Firebase`
- ### `React Router`
- ### `Use Hooks`
- ### `Bootstrap`
- ### `React-Boostrap`
- ### `useRef`
+ ### `Firebase` ### `React Router` ### `Use Hooks`
+ ### `Bootstrap` ### `React-Boostrap` ### `useRef`
  ###
  ###
  ###
