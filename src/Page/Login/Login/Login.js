@@ -2,10 +2,10 @@ import React, { useRef } from 'react';
 import './Login.css';
 import loginImg from '../../../image/loginImg.jpg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { Form } from 'react-bootstrap';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { async } from '@firebase/util';
 
 
 
@@ -16,6 +16,7 @@ const Login = () => {
     const location = useLocation();
 
     let from = location.state?.from?.pathname || '/';
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -23,6 +24,13 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    if (error) {
+        errorElement =
+            <p className='text-danger'>Error: {error?.message}</p>
+    }
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     if (user) {
         navigate(from, { replace: true });
@@ -41,6 +49,12 @@ const Login = () => {
         navigate('/register');
     }
 
+    const resetPassword = async() =>{
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
+    }
+
     return (
         <div className='body'>
             <div className='login'>
@@ -53,9 +67,6 @@ const Login = () => {
                         <form className='login-div' onSubmit={handleSubmit}>
                             <input ref={emailRef} type='email' name='email' placeholder='Enter email' required />
                             <input ref={passwordRef} type='password' name='password' placeholder='Enter password' required />
-                            <Form.Group className='' controlId='formBasicCheckbox'>
-                                <Form.Check type='checkbox' label='Check me out' />
-                            </Form.Group>
                             <button type='submit' className='login-btn2'>
                                 Login
                             </button>
@@ -67,8 +78,11 @@ const Login = () => {
                                     Remember Me
                                 </label>
                             </div>
-                            <p className='forgot-pass'>Forgot Password</p>
+                            <p
+                            onClick={resetPassword}
+                             className='forgot-pass'>Forgot Password</p>
                         </div>
+                        {errorElement}
                         <div>
                             <SocialLogin />
                         </div>

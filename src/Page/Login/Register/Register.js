@@ -49,7 +49,12 @@ const Register = () => {
                             <input type='text' name='name' placeholder='Enter name' />
                             <input type='email' name='email' placeholder='Enter email' required />
                             <input type='password' name='password' placeholder='Enter password' required />
+                            <div>
+                                <input type='checkbox' name='terms' id='terms'></input>
+                                <label htmlFor='terms'>Accept terms and conditions</label>
+                            </div>
                             <input className='login-btn2' type='submit' value='Register' />
+
                         </form>
                         <div className='remember-forgot'>
                             <div class="form-check">
