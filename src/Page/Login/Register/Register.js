@@ -12,11 +12,17 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth,  { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
     const navigate = useNavigate();
 
     const navigateLogin = () => {
         navigate('/login');
+    }
+
+    if(loading || updating){
+        return<Loading/>
     }
 
     if (user) {
@@ -28,6 +34,12 @@ const Register = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
+        //const agree = event.target.terms.checked;
+
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+          console.log('Updated profile');
+        navigate('/home');
 
         createUserWithEmailAndPassword(email, password);
     }
