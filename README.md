@@ -2,16 +2,19 @@
 
 This project is live link [Fstoppers](https://).
 
-- [HOME](http://localhost:3000/home)
-- SERVICES[]
-- GALLERIES[]
+- HOME
+- SERVICES
+- GALLERIES
 - BLOGS
 - CONTACT
 - ABOUT
 - LOGIN
 - REGISTER
 
-## Available Scripts
+## Used External Tools
+ + sl
+ * ad
+
 
 In the project directory, you can run:
 
