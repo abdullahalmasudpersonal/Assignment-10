@@ -1,7 +1,14 @@
-
-
-.bg{
+.bg {
     background: rgb(175, 102, 235);
+}
+nav a{
+    font-weight: bold;
+}
+.signout-btn {
+    background: inherit;
+    border: none;
+    font-weight: bold;
+    color: rgb(65, 44, 75);
 }
 
 

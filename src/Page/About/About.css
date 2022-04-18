@@ -1,0 +1,19 @@
+.about{
+    display: grid;
+}
+.about-detail{
+    margin: auto;
+}
+.about-detail img{
+    border-radius: 49%;
+    height: 400px;
+    width: 370px;
+    background-color: rgba(244, 236, 250, 0.459);
+}
+.about-detail h2{
+    padding: 20px;
+    text-align: center;
+}
+.about-aim{
+    padding: 10px 80px 10px 80px;
+}

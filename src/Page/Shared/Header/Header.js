@@ -17,7 +17,6 @@ const Header = () => {
         signOut(auth);
     }
 
-
     return (
         <>
             <Navbar collapseOnSelect expand="lg" sticky='top' /* bg="primary" */ className='bg' variant="light">
@@ -40,7 +39,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/register">REGISTER</Nav.Link>
                             {
                                 user ?
-                                    <button onClick={handleSignOut} >Sign out</button>
+                                    <button className='signout-btn' onClick={handleSignOut} >SIGN OUT</button>
                                     :
                                     <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
                             }

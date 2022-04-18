@@ -1,13 +1,14 @@
+
+.footer-bg{
+    margin-top: 60px;
+    color: rgb(255, 190, 106);
+    background-color: rgb(104, 0, 201);
+    padding: 0 0 0 0;
+}
 .footer {
-    margin: 30px;
-    display: grid;
-    grid-template-columns: 20% 20%;
+   text-align: center;
+   padding: 30px;
 }
-
-.footer-link {
-    display: grid;
-}
-
-.footer-link a {
-    text-decoration: none;
+.footer p{
+    margin: 0;
 }

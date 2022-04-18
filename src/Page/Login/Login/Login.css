@@ -1,17 +1,17 @@
 
 .body {
     background-image: url('background.jpg');
-    min-height: 380px;
+    height: 780px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding: 7% 0;
+    padding: 6% 0;
 
 }
 .login {
-    height: 650px;
+    height: 670px;
     width: 400px;
     margin: auto;
     border: 1px solid purple;
@@ -25,7 +25,7 @@
 .login-bg {
     margin: 0;
     background-image: url('login-bg.jpg');
-    height: 428px;
+    height: 448px;
     border-radius: 0 0 5px 5px;
 }
 
@@ -36,13 +36,8 @@
 }
 
 .login-div h2 {
-    margin: 30px 0;
-}
-
-.login-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .login-btn button {

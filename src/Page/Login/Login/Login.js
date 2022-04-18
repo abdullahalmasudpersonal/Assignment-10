@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import './Login.css';
 import loginImg from '../../../image/loginImg.jpg';
-import google from '../../../image/google.png';
-import fb from '../../../image/facebook.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { Form } from 'react-bootstrap';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
 
 
 const Login = () => {
@@ -24,7 +25,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     if (user) {
-        navigate(from, {replace:true});
+        navigate(from, { replace: true });
     }
 
 
@@ -48,20 +49,13 @@ const Login = () => {
                 </div>
                 <div className='login-bg'>
                     <div className='login-div'>
-                        <div className='login-btn'>
-                            <h2>Login</h2>
-                            <div>
-                                <button>
-                                    <img src={google} height='40px' width='40px' alt='' />
-                                </button>
-                                <button>
-                                    <img src={fb} height='40px' width='40px' alt='' />
-                                </button>
-                            </div>
-                        </div>
+                        <h2>Login</h2>
                         <form className='login-div' onSubmit={handleSubmit}>
                             <input ref={emailRef} type='email' name='email' placeholder='Enter email' required />
                             <input ref={passwordRef} type='password' name='password' placeholder='Enter password' required />
+                            <Form.Group className='' controlId='formBasicCheckbox'>
+                                <Form.Check type='checkbox' label='Check me out' />
+                            </Form.Group>
                             <button type='submit' className='login-btn2'>
                                 Login
                             </button>
@@ -74,6 +68,9 @@ const Login = () => {
                                 </label>
                             </div>
                             <p className='forgot-pass'>Forgot Password</p>
+                        </div>
+                        <div>
+                            <SocialLogin />
                         </div>
                         <div className='new-user'>
                             <p style={{ textAlign: 'center' }}>New to Fstoppers?<span> <Link style={{ textDecoration: 'none' }} to='/register' onClick={navigateRegister}>Register</Link></span></p>
