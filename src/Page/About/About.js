@@ -4,7 +4,7 @@ import myPic from '../../image/Abdullah al masud (2).jpg';
 
 const About = () => {
     return (
-        <div className=' container about mt-5'>
+        <div className=' container about'>
             <div className='about-detail'>
                     <img src={myPic} alt='' />
                     <h2>ABDULLAH AL MASUD</h2>

@@ -19,7 +19,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" sticky='top' /* bg="primary" */ className='bg' variant="light">
+            <Navbar collapseOnSelect expand="lg" sticky='top' className='bg' variant="light">
                 <Container  >
                     <Navbar.Brand as={Link} to="/">
                         <img height={80} width={140} src={logo} alt='' />
@@ -43,18 +43,6 @@ const Header = () => {
                                     :
                                     <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
                             }
-
-
-
-                            {/*   {
-                                user ?
-                                    <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Sign out</button>
-                                    :
-
-                                    <Nav.Link as={Link} to="login">
-                                        Login
-                                    </Nav.Link>
-                            } */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -64,21 +52,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-/* 
-
-        <div className='header'>
-            <nav className='navber'>
-                <CoustomLink to='/'>HOME</CoustomLink>
-                <CoustomLink to='/services'>SERVICES</CoustomLink>
-                <CoustomLink to='/galleries'>GALLERIES</CoustomLink>
-                <CoustomLink to='/blogs'>BLOGS</CoustomLink>
-                <CoustomLink to='/contact'>CONTACT</CoustomLink>
-                <CoustomLink to='/about'>ABOUT</CoustomLink>
-            </nav>
-
-        </div>
-
-*/

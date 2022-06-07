@@ -15,6 +15,7 @@ import Services from './Page/Shared/Services/Services';
 import CheckOut from './Page/CheckOut/CheckOut';
 import ServicesDetail from './Page/Shared/ServicesDetail/ServicesDetail';
 import RequireAuth from './Page/Login/RequireAuth/RequireAuth';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path='*' element={<Notfound />}></Route>
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

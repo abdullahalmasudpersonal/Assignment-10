@@ -1,7 +1,8 @@
 .services{
     display: grid;
     grid-template-columns: 3fr;
-    margin-top: 30px;
+    padding: 80px;
+    background-color: rgb(236, 215, 250);
 }
 .cart-services{
     display: grid;
@@ -14,7 +15,6 @@
     .services{
         display: grid;
         grid-template-columns: 100%;
-        margin-top: 30px;
     }
     .cart-services{
         display: grid;
@@ -27,7 +27,6 @@
     .services{
         display: grid;
         grid-template-columns: 100%;
-        margin-top: 30px;
     }
     .cart-services{
         display: grid;
@@ -40,7 +39,6 @@
     .services{
         display: grid;
         grid-template-columns: 100%;
-        margin-top: 30px;
     }
     .cart-services{
         display: grid;
@@ -53,7 +51,6 @@
     .services{
         display: grid;
         grid-template-columns: 50% 50%;
-        margin-top: 30px;
     }
     .cart-services{
         display: grid;

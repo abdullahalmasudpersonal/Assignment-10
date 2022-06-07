@@ -1,20 +1,12 @@
-
-.body {
-    background-image: url('background.jpg');
-    height: 780px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    padding: 6% 0;
-
+.log-bg{
+    background-color: rgb(236, 215, 250);
+    padding: 40px;
 }
 .login {
-    height: 670px;
-    width: 400px;
+    height: 700px;
+    width: 430px;
     margin: auto;
-    border: 1px solid purple;
+    background:rgba(99, 0, 192, 0.527);
     border-radius: 5px;
 }
 
@@ -24,7 +16,6 @@
 
 .login-bg {
     margin: 0;
-    background-image: url('login-bg.jpg');
     height: 448px;
     border-radius: 0 0 5px 5px;
 }

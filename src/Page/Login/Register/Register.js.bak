@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import loginImg from '../../../image/loginImg.jpg';
-import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate, useUpdateProfile } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../Login/Loading/Loading';
-import './Register.css';
-import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 const Register = () => {
@@ -16,22 +14,22 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
+ 
     const navigate = useNavigate();
 
     const navigateLogin = () => {
         navigate('/login');
     }
 
-    if (loading || updating) {
-        return <Loading />
+    if(loading || updating){
+        return <Loading/>
     }
 
 
     if (user) {
-        console.log('user', user);
+       console.log('user',user);
     }
 
     const handleRegister = async (event) => {
@@ -41,19 +39,20 @@ const Register = () => {
         const password = event.target.password.value;
         // const agree = event.target.terms.checked;
 
-
-        await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
-        alert('updated profile');
-        navigate('/home');
+     
+           await createUserWithEmailAndPassword(email, password);
+           await updateProfile({displayName:name});
+           alert('updated profile');
+           navigate('/home');
     }
 
 
+
     return (
-        <div className='container register-bg' >
+        <div className='body'>
             <div className='login'>
                 <div>
-                    <img src={loginImg} height='200px' width='428px' alt='' />
+                    <img src={loginImg} height='220px' width='398px' alt='' />
                 </div>
                 <div className='login-bg'>
                     <div className='login-div'>
@@ -64,19 +63,19 @@ const Register = () => {
                             <input type='text' name='name' placeholder='Enter name' />
                             <input type='email' name='email' placeholder='Enter email' required />
                             <input type='password' name='password' placeholder='Enter password' required />
-                            <div className=''>
+                            <div>
                                 <input
-                                    onClick={() => setAgree(!agree)}
-                                    type='checkbox' name='terms' id='terms'></input>
-                                {/*  <label className={agree ? 'text-primary' : 'text-danger'}
+                                onClick={() =>setAgree(!agree)}
+                                type='checkbox' name='terms' id='terms'></input>
+                               {/*  <label className={agree ? 'text-primary' : 'text-danger'}
                                 htmlFor='terms'>Accept terms and conditions</label> */}
-                                <label className={`ps-2 ${agree ? '' : 'text-danger'}`}
-                                    htmlFor='terms'>Accept terms and conditions</label>
+                                <label className={`ps-2 ${agree ? '':'text-danger'}`}
+                                htmlFor='terms'>Accept terms and conditions</label>
                             </div>
-                            <input
-                                disabled={!agree}
-                                className='login-btn2' type='submit'
-                                value='Register' />
+                            <input 
+                            disabled={!agree}
+                            className='login-btn2' type='submit' 
+                            value='Register' />
 
                         </form>
                         <div className='remember-forgot'>

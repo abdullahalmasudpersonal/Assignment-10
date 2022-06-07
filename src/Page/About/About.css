@@ -1,5 +1,7 @@
 .about{
     display: grid;
+    background-color: rgb(236, 215, 250);
+    padding: 100px;
 }
 .about-detail{
     margin: auto;

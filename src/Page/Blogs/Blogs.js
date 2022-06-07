@@ -1,8 +1,9 @@
 import React from 'react';
+import './Blogs.css';
 
 const Blogs = () => {
     return (
-        <div className='container mt-5'>
+        <div className='container blogs'>
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
